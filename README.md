@@ -28,7 +28,7 @@ cd ~/code/skills
 git clone git@github.com:cclank/recipe-generator.git
 ```
 
-### 第二步：安装到 Claude
+### 第二步：安装到 Code Agent
 
 #### 方法 A：使用 Openskills CLI (推荐)
 
