@@ -35,13 +35,10 @@ git clone git@github.com:cclank/recipe-generator.git
 会自动处理路径依赖和配置同步。
 
 ```bash
-# 1. 进入仓库目录
-cd recipe-generator
+# 1. 安装 skill (在仓库父目录执行)
+openskills install ./recipe-generator
 
-# 2. 安装 skill (确保 openskills 已安装)
-openskills install .
-
-# 3. 同步配置到 Agent
+# 2. 同步配置到 Agent
 openskills sync
 ```
 
