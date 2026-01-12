@@ -18,27 +18,47 @@
 
 ## 📥 安装指南
 
-### 方式一：Openskills CLI 
-适用于开发环境，自动处理路径依赖。
+### 第一步：获取代码
 
 ```bash
-# 1. 确保在包含 skill 的目录下
-cd /path/to/parent-folder
+# 找一个合适的目录存放代码
+cd ~/code/skills
 
-# 2. 安装 skill
-openskills install ./recipe-generator
+# 克隆仓库
+git clone git@github.com:cclank/recipe-generator.git
+```
 
-# 3. 同步到 Agent 配置 (根据提示操作)
+### 第二步：安装到 Claude
+
+#### 方法 A：使用 Openskills CLI (推荐)
+
+会自动处理路径依赖和配置同步。
+
+```bash
+# 1. 进入仓库目录
+cd recipe-generator
+
+# 2. 安装 skill (确保 openskills 已安装)
+openskills install .
+
+# 3. 同步配置到 Agent
 openskills sync
 ```
 
-### 方式二：Claude 标准安装
+#### 方法 B：Claude 标准安装 (手动)
+
 手动将 Skill 集成到 Claude 项目的标准方式。
 
-1. **定位技能目录**：在您的项目根目录下找到 `.claude/skills/` 文件夹（如不存在请手动创建）。
-2. **复制文件**：将整个 `recipe-generator` 文件夹复制到该目录下。
-   - 最终路径应为：`YourProject/.claude/skills/recipe-generator/`
-3. **验证**：确保 `SKILL.md` 文件位于正确位置。
+```bash
+# 1. 定位或创建项目的 skills 目录
+mkdir -p YourProject/.claude/skills
+
+# 2. 将整个文件夹复制过去
+cp -r recipe-generator YourProject/.claude/skills/
+
+# 3. 验证：确保 SKILL.md 存在于目标目录
+ls YourProject/.claude/skills/recipe-generator/SKILL.md
+```
 
 ## 🚀 如何使用
 
