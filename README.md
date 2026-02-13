@@ -78,7 +78,6 @@ ls YourProject/.claude/skills/recipe-generator/SKILL.md
 | **C (默认)** | `Plan C` / `现代` | 现代写实，适合专业教程 |
 | **A** | `Plan A` / `海报` | 传统海报，视觉冲击强 |
 | **B** | `Plan B` / `卷轴` | 横版文人卷轴，素雅内敛 |
-
 ## 🖼️ 效果展示
 
 **风格C（默认）生成效果：**
